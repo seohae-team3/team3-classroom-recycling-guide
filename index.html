@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>분리척척 · 교실 분리배출 사전</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== 상단 바 ===== -->
+  <header class="topbar">
+    <div class="logo">
+      <span class="logo-mark">♻️</span>
+      <span class="logo-text">분리척척</span>
+    </div>
+    <a href="#search" class="topbar-link">🔍 바로 찾기</a>
+  </header>
+
+  <main>
+    <!-- ===== 1. 제목 영역 ===== -->
+    <section class="hero">
+      <p class="hero-tag">청소 당번을 위한 교실 분리배출 사전</p>
+      <h1>이거 <span class="highlight">어디에 버려?</span><br>3초 만에 알려줄게요</h1>
+      <p class="hero-desc">
+        우유팩, 과자 봉지, 컵라면 용기… 헷갈리는 교실 쓰레기,<br>
+        이름만 찾으면 어느 통에, 어떻게 버리는지 바로 보여줘요.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat"><strong id="statItems">0</strong><span>등록된 교실 쓰레기</span></div>
+        <div class="stat"><strong id="statBins">0</strong><span>버리는 곳 종류</span></div>
+        <div class="stat"><strong>3초</strong><span>찾는 데 걸리는 시간</span></div>
+      </div>
+
+      <a href="#search" class="btn btn-primary btn-big">🔍 지금 찾아보기</a>
+
+      <!-- 헷갈리기 쉬운 것 바로가기 -->
+      <div class="quick">
+        <p class="quick-title">🤔 우리 반이 제일 많이 헷갈리는 것</p>
+        <div class="quick-list" id="quickList"></div>
+      </div>
+    </section>
+
+    <!-- ===== 2. 분리수거 4가지 약속 ===== -->
+    <section class="rules">
+      <h2 class="section-title">분리수거, 이 4가지만 지키면 돼요</h2>
+      <p class="section-desc">요즘 우리 교실 분리수거, 잘 지켜지고 있나요? 어떤 쓰레기든 이 순서를 기억해요.</p>
+      <ol class="rule-grid">
+        <li class="rule"><span class="rule-num">1</span><span class="rule-icon">🫗</span><b>비우기</b><span>남은 음료나 음식을 다 비워요</span></li>
+        <li class="rule"><span class="rule-num">2</span><span class="rule-icon">💧</span><b>헹구기</b><span>물로 한 번 헹궈요</span></li>
+        <li class="rule"><span class="rule-num">3</span><span class="rule-icon">🏷️</span><b>떼어 내기</b><span>라벨, 뚜껑, 빨대처럼 다른 재질은 떼요</span></li>
+        <li class="rule"><span class="rule-num">4</span><span class="rule-icon">🧺</span><b>섞지 않기</b><span>종이 · 플라스틱 · 캔 바구니에 나눠 넣어요</span></li>
+      </ol>
+
+      <!-- 예시: 플라스틱 음료수병 -->
+      <div class="example">
+        <p class="example-title">예를 들어 <b>플라스틱 음료수병</b>은 이렇게 버려요</p>
+        <div class="flow">
+          <div class="flow-step"><span>🧴</span>다 마신 <br>음료수병</div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step"><span>💧</span>물로 <br>헹구기</div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step"><span>🏷️</span>라벨 <br>뜯기</div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step"><span>👊</span>꾹 눌러 <br>압축하기</div>
+          <span class="flow-arrow" aria-hidden="true">→</span>
+          <div class="flow-step flow-end"><span>🧺</span>플라스틱 <br>재활용 바구니</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. 핵심 기능 3가지 ===== -->
+    <section class="features">
+      <h2 class="section-title">핵심 기능</h2>
+      <div class="feature-grid">
+        <a href="#search" class="feature-card active">
+          <span class="feature-icon">🔍</span>
+          <h3>이거 어디에 버려?</h3>
+          <p>쓰레기 이름을 찾거나 눌러서 버리는 곳과 방법을 확인해요.</p>
+          <span class="badge badge-live">지금 써보기 →</span>
+        </a>
+        <div class="feature-card">
+          <span class="feature-icon">⭕</span>
+          <h3>분리배출 OX 퀴즈</h3>
+          <p>"휴지는 종이류일까?" 헷갈리는 문제를 퀴즈로 익혀요.</p>
+          <span class="badge">준비 중</span>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🧹</span>
+          <h3>청소 당번 3분 체크</h3>
+          <p>청소 끝나기 전 분리수거함 정리 순서를 하나씩 확인해요.</p>
+          <span class="badge">준비 중</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 3. 이거 어디에 버려? (실제로 써볼 수 있는 기능) ===== -->
+    <section class="search-section" id="search">
+      <h2 class="section-title">이거 어디에 버려?</h2>
+      <p class="section-desc">이름을 쓰거나, 아래에서 쓰레기를 눌러 보세요.</p>
+
+      <!-- 검색창 -->
+      <div class="search-box">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input id="searchInput" type="search" placeholder="예: 우유팩, 과자, 휴지" autocomplete="off" aria-label="쓰레기 이름 검색">
+        <button class="search-clear" id="searchClear" aria-label="검색어 지우기" hidden>✕</button>
+      </div>
+
+      <!-- 분리수거함 종류로 보기 -->
+      <p class="filter-title">분리수거함으로 보기</p>
+      <div class="bin-filters" id="binFilters"></div>
+
+      <!-- 결과 -->
+      <p class="result-count" id="resultCount" aria-live="polite"></p>
+      <div class="item-grid" id="itemGrid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    분리척척 · 팀3 해커톤 시연용 화면<br>
+    환경부 분리배출 기준을 바탕으로, 우리 학교 분리수거함(종이 · 플라스틱 · 캔)에 맞춰 정리했어요. 헷갈리면 선생님께 물어보세요.
+  </footer>
+
+  <!-- ===== 버리는 법 창 ===== -->
+  <div class="modal-backdrop" id="modal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="닫기">✕</button>
+      <div class="modal-head">
+        <span class="modal-icon" id="modalIcon"></span>
+        <h3 id="modalTitle"></h3>
+      </div>
+
+      <div class="modal-bin" id="modalBin"></div>
+
+      <h4 class="modal-sub">이렇게 버려요</h4>
+      <ol class="steps" id="modalSteps"></ol>
+
+      <div class="warn" id="modalWarn"></div>
+
+      <button class="btn btn-primary btn-big btn-block" id="modalOk">알겠어요! 👍</button>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
